@@ -1,15 +1,15 @@
-#Please key in the coefficient of x^2, x, and constant in 3 lines
+# Determine if a quadratic equation has no, equal or distinct roots
+
 import math
 
-a = int(input())
-b = int(input())
-c = int(input())
+# Get coefficients of x^2, x and constant
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
 
 if (b*b - 4*a*c < 0):
-	print("No real roots")
-if (b*b - 4*a*c == 0):
-	print(-b/(2*a))
-if (b*b - 4*a*c > 0):
-	print((-b+math.sqrt(b*b-4*a*c))/(2*a))
-	print(' ')
-	print((-b-math.sqrt(b*b-4*a*c))/(2*a))
+  print("No real roots")
+elif (b*b - 4*a*c == 0): # equal roots
+  print(-b/(2*a))
+else: # (b*b - 4*a*c > 0) i.e. distinct roots
+  print((-b+math.sqrt(b*b-4*a*c))/(2*a), (-b-math.sqrt(b*b-4*a*c))/(2*a))
